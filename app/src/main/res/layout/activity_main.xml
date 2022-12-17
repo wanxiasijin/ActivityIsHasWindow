@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="直接获取" />
+
+    <Button
+        android:id="@+id/btnPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="页面跳转" />
+
+
+
+    <Button
+        android:id="@+id/btnDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="弹 dialog" />
+
+    <Button
+        android:id="@+id/btnPopWindow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="弹 popWindow" />
+
+    <Button
+        android:id="@+id/btnDialogFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="弹 DialogFragment" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSysWindowPermission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="授予弹窗权限" />
+
+        <Button
+            android:id="@+id/btnSysWindow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="弹系统弹框" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
