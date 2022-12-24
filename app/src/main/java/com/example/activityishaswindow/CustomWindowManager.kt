@@ -2,6 +2,8 @@ package com.example.activityishaswindow
 
 import android.app.Activity
 import android.app.Application
+import android.view.View
+import android.view.WindowManager
 
 object CustomWindowManager {
     private val activityLifecycle by lazy {
@@ -22,11 +24,11 @@ object CustomWindowManager {
          */
         val targetSubToken=targetDecorView.windowToken
         //可见android.view.WindowManagerGlobal的mViews属性
-        val mViews=WindowUtils.getWindowViews ("mViews")
+        val mViews=WindowUtils.getWindowViews<View> ("mViews")
         //根据mView集合和需要判断的Activity的decorView找到index位置
         val targetIndex=mViews?.indexOfFirst { it==targetDecorView }
         // 获取 mParams 集合 //可见android.view.WindowManagerGlobal的mParams属性
-        val mParams = WindowUtils.getWindowParams("mParams")
+        val mParams = WindowUtils.getWindowViews<WindowManager.LayoutParams>("mParams")
         //获取应用窗口的token
         val targetToken = targetIndex?.let { mParams?.get(it)?.token }
         //遍历判断，不包含需要判断的Activity，如果有其他窗口出现，就说明有弹窗
